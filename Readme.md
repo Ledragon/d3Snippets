@@ -1,6 +1,6 @@
 #D3.js snippets
 ##Description
-A set of snippets helping performing some common operations with [D3.js](https://d3js.org/). These snippets works both with [TypeScript](http://www.typescriptlang.org/) and Javacript (ES6 /ES2015 or above).
+A set of snippets for [Visual Studio Code](https://code.visualstudio.com) helping performing some common operations with [D3.js](https://d3js.org/). These snippets works both with [TypeScript](http://www.typescriptlang.org/) and Javacript (ES6 /ES2015 or above).
 
 ##Available Commands
 `All commands start with the d3 prefix`
