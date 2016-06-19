@@ -6,7 +6,7 @@
             "  .domain([0, 1])",
             "  .range([${0,width}])"
         ],
-        "description": "An linear scale"
+        "description": "Creates a linear scale"
     },
     "d3LinearAxis": {
         "prefix": "d3LinearAxis",
@@ -21,12 +21,12 @@
             "  .classed('axis', true)",
             "  .call(${axis});"
         ],
-        "description": "A linear axis"
+        "description": "Create a linear axis in a selection"
     },
     "d3Transform": {
         "prefix": "d3Transform",
         "body": [
-            "  .attr('transform', `translate($$\\{$1\\},$$\\{$2\\})`)"
+            "  .attr('transform', `translate($\\{$1\\},$\\{$2\\})`)"
         ],
         "description": "d3 translate attribute"
     },
@@ -40,9 +40,9 @@
             "    'width': ${3},",
             "    'height': ${4},",
             "  \\});",
-            "  .style('fill','${lightblue}')"
+            "  .style('fill','${lightblue}');"
         ],
-        "description": "d3 translate attribute"
+        "description": "Appends a rectangle to a selection"
     },
     "d3Circle": {
         "prefix": "d3Circle",
@@ -53,8 +53,8 @@
             "    'cy': ${2},",
             "    'r': ${3},",
             "  \\});",
-            "  .style('fill','${lightblue}')"
+            "  .style('fill','${lightblue}');"
         ],
-        "description": "d3 translate attribute"
+        "description": "Appends a circle to a selection"
     }
 }

@@ -3,9 +3,13 @@
     "publisher": "ledragon",
     "displayName": "D3.js snippets",
     "description": "D3.js helpers snippets for TypeScript and Javascript (ES6)",
-    "version": "0.0.1",
-    "engines": { "vscode": "0.10.x" },
-    "categories": ["Snippets"], 
+    "version": "0.0.4",
+    "engines": {
+        "vscode": "0.10.x"
+    },
+    "categories": [
+        "Snippets"
+    ],
     "contributes": {
         "snippets": [
             {
