@@ -1,6 +1,7 @@
 {
     "name": "d3-helpers-snippets",
     "publisher": "Hugues Stefanski",
+    "displayName": "D3.js snippets",
     "description": "D3.js helpers snippets for TypeScript and Javascript (ES6)",
     "version": "0.0.1",
     "engines": { "vscode": "0.10.x" },
@@ -8,9 +9,22 @@
     "contributes": {
         "snippets": [
             {
-                "language": "markdown",
-                "path": "./snippets/markdown.json"
+                "language": "javascript",
+                "path": "./snippets/javascript.json"
+            },
+            {
+                "language": "typescript",
+                "path": "./snippets/typescript.json"
             }
         ]
+    },
+    "license": "See License in LICENSE",
+    "homepage": "https://github.com/Ledragon/d3Snippets",
+    "author": {
+        "name": "Hugues Stefanski"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Ledragon/d3Snippets"
     }
 }
