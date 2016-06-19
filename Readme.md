@@ -69,3 +69,19 @@ var circle = container.append('circle')
               });
               .style('fill','lightblue');
 ```
+###d3Bind
+
+Creates an exit-enter stub.
+
+Output:
+```javascript
+var dataBound = container.selectAll('.classed')
+    .data(data);
+dataBound
+  .exit()
+  .remove();
+dataBound
+  .enter()
+  .append('g')
+  .classed('classed', true);
+```

@@ -56,5 +56,20 @@
             "  .style('fill','${lightblue}');"
         ],
         "description": "Appends a circle to a selection"
+    },
+    "d3Bind":{
+        "prefix": "d3Bind",
+        "body":[
+            "var ${dataBound} = ${container}.selectAll('.${classed}')",
+            "    .data(${data});",
+            "${dataBound}",
+            "  .exit()",
+            "  .remove();",
+            "${dataBound}",
+            "  .enter()",
+            "  .append('g')",
+            "  .classed('${classed}', true);"
+        ],
+        "description": "Creates an exit-enter stub"
     }
 }
