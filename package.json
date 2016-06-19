@@ -1,6 +1,6 @@
 {
     "name": "d3-helpers-snippets",
-    "publisher": "Hugues Stefanski",
+    "publisher": "ledragon",
     "displayName": "D3.js snippets",
     "description": "D3.js helpers snippets for TypeScript and Javascript (ES6)",
     "version": "0.0.1",
