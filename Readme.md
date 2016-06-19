@@ -11,7 +11,32 @@ Creates a linear scale.
 
 Output:
 ```javascript
-            var scale = d3.scale.linear()
-            .domain([0, 1])
-            .range([0,width])
+var scale = d3.scale.linear()
+  .domain([0, 1])
+  .range([0,width])
+```
+
+###d3LinearAxis
+
+Creates a linear axis in a selection.
+
+Output:
+```javascript
+var scale = d3.scale.linear()
+  .domain([0, 1])
+  .range([0,width])
+var axis = d3.svg.axis()
+  .orient('bottom')
+  .scale(scale);
+var axisGroup = container.append('g')
+  .classed('axis', true)
+  .call(axis);
+```
+###d3Transform
+
+Appends the `transform` attribute *in situ*.
+
+Output:
+```javascript
+.attr('transform', `translate($${},$${})`)
 ```

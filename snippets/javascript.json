@@ -3,8 +3,8 @@
         "prefix": "d3LinearScale",
         "body": [
             "var ${scale} = d3.scale.linear()",
-            ".domain([0, 1])",
-            ".range([${0,width}])"
+            "  .domain([0, 1])",
+            "  .range([${0,width}])"
         ],
         "description": "An linear scale"
     },
@@ -12,21 +12,21 @@
         "prefix": "d3LinearAxis",
         "body": [
             "var ${scale} = d3.scale.linear()",
-            ".domain([0, 1])",
-            ".range([${0,width}])",
+            "  .domain([0, 1])",
+            "  .range([${0,width}])",
             "var ${axis} = d3.svg.axis()",
-            ".orient('${bottom}')",
-            ".scale(${scale});",
+            "  .orient('${bottom}')",
+            "  .scale(${scale});",
             "var ${axis}Group = container.append('g')",
-            ".classed('axis', true)",
-            ".call(${axis});"
+            "  .classed('axis', true)",
+            "  .call(${axis});"
         ],
         "description": "A linear axis"
     },
     "d3Transform": {
         "prefix": "d3Transform",
         "body": [
-            ".attr('transform', `translate($${$1},$${$2})`)"
+            "  .attr('transform', `translate($$\\{$1\\},$$\\{$2\\})`)"
         ],
         "description": "d3 translate attribute"
     },
