@@ -38,5 +38,34 @@ Appends the `transform` attribute *in situ*.
 
 Output:
 ```javascript
-.attr('transform', `translate($${},$${})`)
+.attr('transform', `translate(${},${})`)
+```
+###d3Rect
+
+Appends a rectangle to a selection.
+
+Output:
+```javascript
+var rect = container.append('rect')
+              .attr({
+                'x': ,
+                'y': ,
+                'width': ,
+                'height': ,
+              });
+              .style('fill', 'lightblue');
+```
+###d3Circle
+
+Appends a circle to a selection.
+
+Output:
+```javascript
+var circle = container.append('circle')
+              .attr({
+                'cx': ,
+                'cy': ,
+                'r': ,
+              });
+              .style('fill','lightblue');
 ```

@@ -26,7 +26,7 @@
     "d3Transform": {
         "prefix": "d3Transform",
         "body": [
-            "  .attr('transform', `translate($$\\{$1\\},$$\\{$2\\})`)"
+            "  .attr('transform', `translate($\\{$1\\},$\\{$2\\})`)"
         ],
         "description": "d3 translate attribute"
     },
@@ -40,7 +40,7 @@
             "    'width': ${3},",
             "    'height': ${4},",
             "  \\});",
-            "  .style('fill','${lightblue}')"
+            "  .style('fill','${lightblue}');"
         ],
         "description": "d3 translate attribute"
     },
@@ -53,7 +53,7 @@
             "    'cy': ${2},",
             "    'r': ${3},",
             "  \\});",
-            "  .style('fill','${lightblue}')"
+            "  .style('fill','${lightblue}');"
         ],
         "description": "d3 translate attribute"
     }
