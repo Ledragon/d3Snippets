@@ -1,0 +1,60 @@
+{
+    "d3LinearScale": {
+        "prefix": "d3LinearScale",
+        "body": [
+            "var ${scale} = d3.scale.linear()",
+            ".domain([0, 1])",
+            ".range([${0,width}])"
+        ],
+        "description": "An linear scale"
+    },
+    "d3LinearAxis": {
+        "prefix": "d3LinearAxis",
+        "body": [
+            "var ${scale} = d3.scale.linear()",
+            ".domain([0, 1])",
+            ".range([${0,width}])",
+            "var ${axis} = d3.svg.axis()",
+            ".orient('${bottom}')",
+            ".scale(${scale});",
+            "var ${axis}Group = container.append('g')",
+            ".classed('axis', true)",
+            ".call(${axis});"
+        ],
+        "description": "A linear axis"
+    },
+    "d3Transform": {
+        "prefix": "d3Transform",
+        "body": [
+            ".attr('transform', `translate($${$1},$${$2})`)"
+        ],
+        "description": "d3 translate attribute"
+    },
+    "d3Rect": {
+        "prefix": "d3Rect",
+        "body": [
+            "var ${rect} = ${container}.append('rect')",
+            "  .attr(\\{",
+            "    'x': ${1},",
+            "    'y': ${2},",
+            "    'width': ${3},",
+            "    'height': ${4},",
+            "  \\});",
+            "  .style('fill','${lightblue}')"
+        ],
+        "description": "d3 translate attribute"
+    },
+    "d3Circle": {
+        "prefix": "d3Circle",
+        "body": [
+            "var ${circle} = ${container}.append('circle')",
+            "  .attr(\\{",
+            "    'cx': ${1},",
+            "    'cy': ${2},",
+            "    'r': ${3},",
+            "  \\});",
+            "  .style('fill','${lightblue}')"
+        ],
+        "description": "d3 translate attribute"
+    }
+}

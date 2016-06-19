@@ -1,0 +1,16 @@
+{
+    "name": "d3-helpers-snippets",
+    "publisher": "Hugues Stefanski",
+    "description": "D3.js helpers snippets for TypeScript and Javascript (ES6)",
+    "version": "0.0.1",
+    "engines": { "vscode": "0.10.x" },
+    "categories": ["Snippets"], 
+    "contributes": {
+        "snippets": [
+            {
+                "language": "markdown",
+                "path": "./snippets/markdown.json"
+            }
+        ]
+    }
+}
