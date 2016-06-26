@@ -57,9 +57,9 @@
         ],
         "description": "Appends a circle to a selection"
     },
-    "d3Bind":{
+    "d3Bind": {
         "prefix": "d3Bind",
-        "body":[
+        "body": [
             "var ${dataBound} = ${container}.selectAll('.${classed}')",
             "    .data(${data});",
             "${dataBound}",
@@ -71,5 +71,19 @@
             "  .classed('${classed}', true);"
         ],
         "description": "Creates an exit-enter stub"
+    },
+    "d3CSV": {
+        "prefix": "d3CSV",
+        "body": [
+            "d3.csv('${filename}.csv',",
+            "(error, data) => {",
+            "     if (error) {",
+            "         console.error(error);",
+            "   } else {",
+            "       console.log(data);",
+            "   }",
+            "});"
+        ],
+        "description": "Reads a csv file"
     }
 }
