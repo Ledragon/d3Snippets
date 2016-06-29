@@ -52,7 +52,7 @@ var rect = container.append('rect')
                 'y': ,
                 'width': ,
                 'height': ,
-              });
+              })
               .style('fill', 'lightblue');
 ```
 ###d3Circle
@@ -66,7 +66,7 @@ var circle = container.append('circle')
                 'cx': ,
                 'cy': ,
                 'r': ,
-              });
+              })
               .style('fill','lightblue');
 ```
 ###d3Bind
@@ -84,4 +84,20 @@ dataBound
   .enter()
   .append('g')
   .classed('classed', true);
+```
+###d3CSV
+
+Creates a stub to read a csv file.
+
+Output:
+```javascript
+d3.csv('filename.csv',
+(error, data) => {
+     if (error) {
+         console.error(error);
+   } else {
+       console.log(data);
+   }
+});
+
 ```

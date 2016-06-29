@@ -17,7 +17,7 @@
             "var ${axis} = d3.svg.axis()",
             "  .orient('${bottom}')",
             "  .scale(${scale});",
-            "var ${axis}Group = container.append('g')",
+            "var ${axis}Group = ${container}.append('g')",
             "  .classed('axis', true)",
             "  .call(${axis});"
         ],
