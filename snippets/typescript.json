@@ -4,10 +4,10 @@
         "body": [
             "let ${scale} = d3.scaleLinear()",
             "    .domain([0, 1])",
-            "    .range([${0,width}])"
+            "    .range([${0,width}]);"
         ]
     },
-    "d3LinearAxis": {
+    "d3LinearBottomAxis": {
         "prefix": "d3LinBot",
         "body": [
             "let ${scale} = d3.scaleLinear()",

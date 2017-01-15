@@ -5,8 +5,20 @@ A set of snippets for [Visual Studio Code](https://code.visualstudio.com) helpin
 ##Available Commands
 `All commands start with the d3 prefix`
 
-###d3LinearScale
+###d3LinScale
 
+Creates a linear scale.
+
+Output:
+```javascript
+let scale = d3.scaleLinear()
+    .domain([0, 1])
+    .range([0,width]);
+```
+
+###d3v3LinearScale
+
+*v3 specific*
 Creates a linear scale.
 
 Output:
@@ -16,8 +28,9 @@ var scale = d3.scale.linear()
   .range([0,width])
 ```
 
-###d3LinearAxis
+###d3v3LinearAxis
 
+*v3 specific*
 Creates a linear axis in a selection.
 
 Output:
