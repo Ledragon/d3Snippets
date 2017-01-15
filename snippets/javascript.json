@@ -8,12 +8,12 @@
         ]
     },
     "d3LinearAxis": {
-        "prefix": "d3LinBot",
+        "prefix": "d3LinAxis",
         "body": [
             "let ${scale} = d3.scaleLinear()",
             "    .domain([0, 1])",
             "    .range([${0,width}]);",
-            "let ${axis} = d3.axisBottom(${scale});",
+            "let ${axis} = d3.${axisBottom}(${scale});",
             "let ${axis}Group = ${container}.append('g')",
             "    .classed('axis', true)",
             "    .call(${axis});"

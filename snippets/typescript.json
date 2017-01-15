@@ -46,7 +46,7 @@
     "d3Transform": {
         "prefix": "d3Transform",
         "body": [
-            "  .attr('transform', (d,i) => `translate($\\{$1\\},$\\{$2\\})`)"
+            "  .attr('transform', (d, i) => `translate($\\{$1\\},$\\{$2\\})`)"
         ],
         "description": "d3 translate attribute"
     },

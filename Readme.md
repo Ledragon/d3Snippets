@@ -1,11 +1,11 @@
-#D3.js snippets
-##Description
+# D3.js snippets
+## Description
 A set of snippets for [Visual Studio Code](https://code.visualstudio.com) helping performing some common operations with [D3.js](https://d3js.org/). These snippets works both with [TypeScript](http://www.typescriptlang.org/) and Javacript (ES6 /ES2015 or above).
 
-##Available Commands
+## Available Commands
 `All commands start with the d3 prefix`
 
-###d3LinScale
+### d3LinScale (*v4 specific*)
 
 Creates a linear scale.
 
@@ -15,10 +15,23 @@ let scale = d3.scaleLinear()
     .domain([0, 1])
     .range([0,width]);
 ```
+### d3LinAxis (*v4 specific*)
 
-###d3v3LinearScale
+Creates a linear axis in a selection.
 
-*v3 specific*
+Output:
+```javascript
+let scale = d3.scaleLinear()
+    .domain([0, 1])
+    .range([0,width]);
+let axis = d3.axisBottom(scale);
+let axisGroup = container.append('g')
+    .classed('axis', true)
+    .call(axis);
+```
+
+### d3v3LinearScale (*v3 specific*)
+
 Creates a linear scale.
 
 Output:
@@ -28,9 +41,8 @@ var scale = d3.scale.linear()
   .range([0,width])
 ```
 
-###d3v3LinearAxis
+### d3v3LinearAxis (*v3 specific*)
 
-*v3 specific*
 Creates a linear axis in a selection.
 
 Output:
@@ -45,15 +57,17 @@ var axisGroup = container.append('g')
   .classed('axis', true)
   .call(axis);
 ```
-###d3Transform
+
+### d3Transform
 
 Appends the `transform` attribute *in situ*.
 
 Output:
 ```javascript
-.attr('transform', `translate(${},${})`)
+.attr('transform', (d, i) => `translate(${},${})`)
 ```
-###d3Rect
+
+### d3Rect
 
 Appends a rectangle to a selection.
 
