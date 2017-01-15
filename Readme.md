@@ -1,6 +1,6 @@
 # D3.js snippets
 ## Description
-A set of snippets for [Visual Studio Code](https://code.visualstudio.com) helping performing some common operations with [D3.js](https://d3js.org/). These snippets works both with [TypeScript](http://www.typescriptlang.org/) and Javacript (ES6 /ES2015 or above).
+A set of snippets for [Visual Studio Code](https://code.visualstudio.com) helping performing some common operations with [D3.js](https://d3js.org/). These snippets work both with [TypeScript](http://www.typescriptlang.org/) and Javacript (ES6 /ES2015 or above).
 
 ## Available Commands
 `All commands start with the d3 prefix`
@@ -9,7 +9,7 @@ A set of snippets for [Visual Studio Code](https://code.visualstudio.com) helpin
 
 Creates a linear scale.
 
-Output:
+**Output:**
 ```javascript
 let scale = d3.scaleLinear()
     .domain([0, 1])
@@ -19,7 +19,7 @@ let scale = d3.scaleLinear()
 
 Creates a linear axis in a selection.
 
-Output:
+**Output:**
 ```javascript
 let scale = d3.scaleLinear()
     .domain([0, 1])
@@ -34,7 +34,7 @@ let axisGroup = container.append('g')
 
 Creates a linear scale.
 
-Output:
+**Output:**
 ```javascript
 var scale = d3.scale.linear()
   .domain([0, 1])
@@ -45,7 +45,7 @@ var scale = d3.scale.linear()
 
 Creates a linear axis in a selection.
 
-Output:
+**Output:**
 ```javascript
 var scale = d3.scale.linear()
   .domain([0, 1])
@@ -62,7 +62,7 @@ var axisGroup = container.append('g')
 
 Appends the `transform` attribute *in situ*.
 
-Output:
+**Output:**
 ```javascript
 .attr('transform', (d, i) => `translate(${},${})`)
 ```
@@ -71,60 +71,82 @@ Output:
 
 Appends a rectangle to a selection.
 
-Output:
+**Output:**
 ```javascript
 var rect = container.append('rect')
-              .attr({
-                'x': ,
-                'y': ,
-                'width': ,
-                'height': ,
-              })
-              .style('fill', 'lightblue');
+  .attr('x', )
+  .attr('y', )
+  .attr('width', )
+  .attr('height', )
+  .style('stroke','none')
+  .style('fill','lightblue');
 ```
-###d3Circle
+### d3Circle
 
 Appends a circle to a selection.
 
-Output:
+**Output:**
 ```javascript
 var circle = container.append('circle')
-              .attr({
-                'cx': ,
-                'cy': ,
-                'r': ,
-              })
-              .style('fill','lightblue');
+  .attr('cx', )
+  .attr('cy', )
+  .attr('r', )
+  .style('stroke','none')
+  .style('fill','lightblue');
 ```
-###d3Bind
+### d3Bind
 
 Creates an exit-enter stub.
 
-Output:
+**Output:**
 ```javascript
 var dataBound = container.selectAll('.classed')
     .data(data);
 dataBound
-  .exit()
-  .remove();
-dataBound
-  .enter()
-  .append('g')
-  .classed('classed', true);
+    .exit()
+    .remove();
+var enterSelection = dataBound
+    .enter()
+    .append('g')
+    .classed('classed', true);
 ```
-###d3CSV
+### d3Csv
 
 Creates a stub to read a csv file.
 
-Output:
+**Output:**
 ```javascript
 d3.csv('filename.csv',
 (error, data) => {
-     if (error) {
-         console.error(error);
+   if (error) {
+       console.error(error);
    } else {
        console.log(data);
    }
 });
+```
 
+### d3Plot
+
+Creates an svg,and a group with margins as a container for plotting purpose.
+
+**Output:**
+```javascript
+let svg = d3.select('#chart')
+    .append('svg')
+    .attr('width', width)
+    .attr('height', height);
+
+let plotMargins = {
+    top: 30,
+    bottom: 30,
+    left: 150,
+    right: 30
+};
+let plotGroup = svg.append('g')
+    .classed('plot', true)
+    .attr('transform', `translate(${plotMargins.left},${plotMargins.top})`);
+
+let plotWidth = width - plotMargins.left - plotMargins.right;
+let plotHeight = height - plotMargins.top - plotMargins.bottom;
 ```

@@ -93,12 +93,12 @@
     "d3Csv": {
         "prefix": "d3Csv",
         "body": [
-            "d3.csv('${filename}.csv',",
+           "d3.csv('${filename}.csv',",
             "(error, data) => {",
-            "     if (error) {",
-            "         console.error(error);",
+            "   if (error) {",
+            "       console.error(error);",
             "   } else {",
-            "       console.log(data);",
+            "       ${console.log(data);}",
             "   }",
             "});"
         ],
