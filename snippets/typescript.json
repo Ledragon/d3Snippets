@@ -46,7 +46,7 @@
     "d3Transform": {
         "prefix": "d3Transform",
         "body": [
-            "  .attr('transform', (d, i) => `translate($\\{$1\\},$\\{$2\\})`)"
+            "  .attr('transform', (d, i) => `translate(${$1\\},${$2\\})`)"
         ],
         "description": "d3 translate attribute"
     },
@@ -58,6 +58,7 @@
             "  .attr('y', ${2})",
             "  .attr('width', ${3})",
             "  .attr('height', ${4})",
+            "  .style('stroke','${none}')",
             "  .style('fill','${lightblue}');"
         ],
         "description": "Appends a rectangle to a selection"
@@ -69,6 +70,7 @@
             "  .attr('cx', ${1})",
             "  .attr('cy', ${2})",
             "  .attr('r', ${3})",
+            "  .style('stroke','${none}')",
             "  .style('fill','${lightblue}');"
         ],
         "description": "Appends a circle to a selection"
