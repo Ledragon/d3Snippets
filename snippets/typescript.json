@@ -1,5 +1,25 @@
 {
     "d3LinearScale": {
+        "prefix": "d3LinScale",
+        "body": [
+            "let ${scale} = d3.scaleLinear()",
+            "    .domain([0, 1])",
+            "    .range([${0,width}])"
+        ]
+    },
+    "d3LinearAxis": {
+        "prefix": "d3LinBot",
+        "body": [
+            "let ${scale} = d3.scaleLinear()",
+            "    .domain([0, 1])",
+            "    .range([${0,width}])",
+            "let ${axis} = d3.axisBottom(${scale});",
+            "let ${axis}Group = ${container}.append('g')",
+            "    .classed('axis', true)",
+            "    .call(${axis});"
+        ]
+    },
+    "d3v3LinearScale": {
         "prefix": "d3LinearScale",
         "body": [
             "var ${scale} = d3.scale.linear()",
@@ -8,7 +28,7 @@
         ],
         "description": "Creates a linear scale"
     },
-    "d3LinearAxis": {
+    "d3v3LinearAxis": {
         "prefix": "d3LinearAxis",
         "body": [
             "var ${scale} = d3.scale.linear()",
@@ -61,7 +81,7 @@
             "${dataBound}",
             "  .exit()",
             "  .remove();",
-            "${dataBound}",
+            "var ${enterSelection} = ${dataBound}",
             "  .enter()",
             "  .append('g')",
             "  .classed('${classed}', true);"
